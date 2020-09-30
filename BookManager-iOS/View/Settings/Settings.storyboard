@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="ja0-dx-Pi8">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Settings View Controller-->
+        <scene sceneID="QgC-Q6-yZt">
+            <objects>
+                <viewController id="ja0-dx-Pi8" customClass="SettingsViewController" customModule="BookManager_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2ls-Lq-3Rc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Vgg-XA-Hoo">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="設定" id="bIh-6y-ALc"/>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="ja0-dx-Pi8" id="emU-La-C8i"/>
+                                </connections>
+                            </navigationBar>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gbi-Bv-ITB">
+                                <rect key="frame" x="32" y="287" width="350" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="ログアウト"/>
+                                <connections>
+                                    <action selector="logoutButtonTapped:" destination="ja0-dx-Pi8" eventType="touchUpInside" id="Bbm-Ri-nOZ"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="yB1-35-QAe">
+                                <rect key="frame" x="197" y="443" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="yB1-35-QAe" firstAttribute="centerX" secondItem="umV-KL-wkH" secondAttribute="centerX" id="0n4-gi-aNS"/>
+                            <constraint firstItem="gbi-Bv-ITB" firstAttribute="leading" secondItem="umV-KL-wkH" secondAttribute="leading" constant="32" id="3Qw-rb-RPD"/>
+                            <constraint firstItem="gbi-Bv-ITB" firstAttribute="centerX" secondItem="umV-KL-wkH" secondAttribute="centerX" id="7KJ-lB-9ho"/>
+                            <constraint firstItem="yB1-35-QAe" firstAttribute="centerY" secondItem="umV-KL-wkH" secondAttribute="centerY" id="NzB-R4-rAi"/>
+                            <constraint firstItem="Vgg-XA-Hoo" firstAttribute="top" secondItem="umV-KL-wkH" secondAttribute="top" id="b0m-1T-fUd"/>
+                            <constraint firstItem="gbi-Bv-ITB" firstAttribute="centerY" secondItem="umV-KL-wkH" secondAttribute="centerY" multiplier="2:3" id="nXO-8t-flC"/>
+                            <constraint firstItem="Vgg-XA-Hoo" firstAttribute="trailing" secondItem="2ls-Lq-3Rc" secondAttribute="trailing" id="pcC-5F-XGE"/>
+                            <constraint firstItem="gbi-Bv-ITB" firstAttribute="leading" secondItem="umV-KL-wkH" secondAttribute="leading" constant="32" id="qZM-ii-6hi"/>
+                            <constraint firstItem="Vgg-XA-Hoo" firstAttribute="leading" secondItem="2ls-Lq-3Rc" secondAttribute="leading" id="ykd-lS-OeO"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="umV-KL-wkH"/>
+                    </view>
+                    <connections>
+                        <outlet property="loadingIndicator" destination="yB1-35-QAe" id="3tw-Ij-hpm"/>
+                        <outlet property="settingsNavigationBar" destination="Vgg-XA-Hoo" id="1S3-hm-z2Z"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="60x-E3-z5s" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="139" y="102"/>
+        </scene>
+    </scenes>
+</document>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="oqI-kc-Cgd">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Sign Up View Controller-->
+        <scene sceneID="o1F-mf-cec">
+            <objects>
+                <viewController id="oqI-kc-Cgd" customClass="SignUpViewController" customModule="BookManager_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="geu-hg-ls4">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uKB-fz-gf7">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="アカウント設定" id="MlU-1J-8QY">
+                                        <barButtonItem key="leftBarButtonItem" title="戻る" id="lVo-0y-By4">
+                                            <connections>
+                                                <action selector="closeButtonTapped:" destination="oqI-kc-Cgd" id="UTe-0T-6fp"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" title="保存" id="8JH-nz-cJK">
+                                            <connections>
+                                                <action selector="saveButtonTapped:" destination="oqI-kc-Cgd" id="aGL-rd-n9y"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="oqI-kc-Cgd" id="pAa-nk-oL9"/>
+                                </connections>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メールアドレス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RIC-nE-Vkj">
+                                <rect key="frame" x="16" y="309.5" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8fY-Ll-Jk7">
+                                <rect key="frame" x="16" y="338.5" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <connections>
+                                    <outlet property="delegate" destination="oqI-kc-Cgd" id="Yki-ha-Grz"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パスワード" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ayw-2H-gC0">
+                                <rect key="frame" x="16" y="388.5" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="yRe-ex-P4f">
+                                <rect key="frame" x="16" y="417.5" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="oqI-kc-Cgd" id="TbJ-vj-Slx"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パスワード確認" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gsr-5e-5fk">
+                                <rect key="frame" x="16" y="467.5" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F7R-fT-VRM">
+                                <rect key="frame" x="16" y="496.5" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="oqI-kc-Cgd" id="hz8-Lx-cdk"/>
+                                </connections>
+                            </textField>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="WSf-Iu-F2m">
+                                <rect key="frame" x="197" y="443" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="F7R-fT-VRM" firstAttribute="leading" secondItem="RIC-nE-Vkj" secondAttribute="leading" id="AhP-MV-hVJ"/>
+                            <constraint firstItem="8fY-Ll-Jk7" firstAttribute="top" secondItem="RIC-nE-Vkj" secondAttribute="bottom" constant="8" id="BDP-8M-M24"/>
+                            <constraint firstItem="uKB-fz-gf7" firstAttribute="leading" secondItem="geu-hg-ls4" secondAttribute="leading" id="Cgf-kC-fM3"/>
+                            <constraint firstItem="8fY-Ll-Jk7" firstAttribute="leading" secondItem="RIC-nE-Vkj" secondAttribute="leading" id="Gca-xG-iww"/>
+                            <constraint firstItem="WSf-Iu-F2m" firstAttribute="centerY" secondItem="eNG-XS-FC0" secondAttribute="centerY" id="Lui-07-oSM"/>
+                            <constraint firstItem="eNG-XS-FC0" firstAttribute="trailing" secondItem="F7R-fT-VRM" secondAttribute="trailing" constant="16" id="MN9-6k-ha8"/>
+                            <constraint firstItem="yRe-ex-P4f" firstAttribute="top" secondItem="ayw-2H-gC0" secondAttribute="bottom" constant="8" id="RRw-c7-DrJ"/>
+                            <constraint firstItem="yRe-ex-P4f" firstAttribute="leading" secondItem="ayw-2H-gC0" secondAttribute="leading" id="TAA-Cu-szY"/>
+                            <constraint firstItem="F7R-fT-VRM" firstAttribute="top" secondItem="Gsr-5e-5fk" secondAttribute="bottom" constant="8" id="X39-lS-e3H"/>
+                            <constraint firstItem="ayw-2H-gC0" firstAttribute="leading" secondItem="RIC-nE-Vkj" secondAttribute="leading" id="d5L-Bc-VSD"/>
+                            <constraint firstItem="RIC-nE-Vkj" firstAttribute="centerY" secondItem="eNG-XS-FC0" secondAttribute="centerY" multiplier="5:7" constant="-3.75" id="huk-RF-Rkj"/>
+                            <constraint firstItem="RIC-nE-Vkj" firstAttribute="leading" secondItem="eNG-XS-FC0" secondAttribute="leading" constant="16" id="jmJ-yI-QYb"/>
+                            <constraint firstItem="eNG-XS-FC0" firstAttribute="trailing" secondItem="8fY-Ll-Jk7" secondAttribute="trailing" constant="16" id="kJW-Dk-nzB"/>
+                            <constraint firstItem="WSf-Iu-F2m" firstAttribute="centerX" secondItem="eNG-XS-FC0" secondAttribute="centerX" id="nSf-ci-mN8"/>
+                            <constraint firstItem="Gsr-5e-5fk" firstAttribute="top" secondItem="yRe-ex-P4f" secondAttribute="bottom" constant="16" id="qt4-jL-Rz3"/>
+                            <constraint firstItem="uKB-fz-gf7" firstAttribute="trailing" secondItem="geu-hg-ls4" secondAttribute="trailing" id="sPv-Q8-EB3"/>
+                            <constraint firstItem="ayw-2H-gC0" firstAttribute="top" secondItem="8fY-Ll-Jk7" secondAttribute="bottom" constant="16" id="uJm-jM-WKT"/>
+                            <constraint firstItem="Gsr-5e-5fk" firstAttribute="leading" secondItem="RIC-nE-Vkj" secondAttribute="leading" id="wA2-BC-LRk"/>
+                            <constraint firstItem="eNG-XS-FC0" firstAttribute="trailing" secondItem="yRe-ex-P4f" secondAttribute="trailing" constant="16" id="xCj-C4-51K"/>
+                            <constraint firstItem="uKB-fz-gf7" firstAttribute="top" secondItem="eNG-XS-FC0" secondAttribute="top" id="xSS-G2-xRj"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="eNG-XS-FC0"/>
+                    </view>
+                    <connections>
+                        <outlet property="confirmPasswordTextField" destination="F7R-fT-VRM" id="yP6-UP-yxV"/>
+                        <outlet property="mailAddressTextField" destination="8fY-Ll-Jk7" id="f4C-Z9-5W1"/>
+                        <outlet property="passwordTextField" destination="yRe-ex-P4f" id="RIq-Ge-1rs"/>
+                        <outlet property="signUpLoadingIndicator" destination="WSf-Iu-F2m" id="B4n-6M-MKF"/>
+                        <outlet property="signUpNavigationBar" destination="uKB-fz-gf7" id="aVJ-al-cNl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="n6i-T1-YBD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="132.58928571428572"/>
+        </scene>
+    </scenes>
+</document>

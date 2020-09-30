@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="16097" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="DVJ-I2-jd3">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="16087"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="nd4-K8-yoz">
+            <objects>
+                <viewController id="DVJ-I2-jd3" customClass="LoginViewController" customModule="BookManager_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="bFv-Cn-FWD">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="1dx-uA-s71">
+                                <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                                <items>
+                                    <navigationItem title="ログイン" id="sfd-yb-aLK"/>
+                                </items>
+                                <connections>
+                                    <outlet property="delegate" destination="DVJ-I2-jd3" id="YJ5-zU-DbT"/>
+                                </connections>
+                            </navigationBar>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="メールアドレス" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yB6-bE-1hu">
+                                <rect key="frame" x="16" y="329.5" width="122" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="BYg-fW-D3a">
+                                <rect key="frame" x="16" y="358.5" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
+                                <connections>
+                                    <outlet property="delegate" destination="DVJ-I2-jd3" id="5Um-aN-J2H"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="パスワード" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="e4l-xl-Qg1">
+                                <rect key="frame" x="16" y="408.5" width="87" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Wtl-bI-u58">
+                                <rect key="frame" x="16" y="437.5" width="382" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
+                                <connections>
+                                    <outlet property="delegate" destination="DVJ-I2-jd3" id="gTf-z9-ea6"/>
+                                </connections>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vjq-CI-R6x">
+                                <rect key="frame" x="16" y="503.5" width="382" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="ログイン"/>
+                                <connections>
+                                    <action selector="loginButtonTapped:" destination="DVJ-I2-jd3" eventType="touchUpInside" id="7ig-0o-iMh"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="m2p-XF-8RT">
+                                <rect key="frame" x="336" y="565.5" width="62" height="30"/>
+                                <color key="backgroundColor" systemColor="systemGray5Color" red="0.8980392157" green="0.8980392157" blue="0.91764705879999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="新規作成"/>
+                                <connections>
+                                    <action selector="signUpButtonTapped:" destination="DVJ-I2-jd3" eventType="touchUpInside" id="4Qw-DV-ycj"/>
+                                </connections>
+                            </button>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="medium" translatesAutoresizingMaskIntoConstraints="NO" id="Cvc-bU-SQz">
+                                <rect key="frame" x="197" y="443" width="20" height="20"/>
+                            </activityIndicatorView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Wtl-bI-u58" firstAttribute="leading" secondItem="e4l-xl-Qg1" secondAttribute="leading" id="2DK-eG-XIa"/>
+                            <constraint firstItem="e4l-xl-Qg1" firstAttribute="top" secondItem="BYg-fW-D3a" secondAttribute="bottom" constant="16" id="3cf-3x-ryQ"/>
+                            <constraint firstItem="9rk-Cr-A3u" firstAttribute="trailing" secondItem="m2p-XF-8RT" secondAttribute="trailing" constant="16" id="8Sd-fe-pwL"/>
+                            <constraint firstItem="9rk-Cr-A3u" firstAttribute="trailing" secondItem="Wtl-bI-u58" secondAttribute="trailing" constant="16" id="AxE-ip-rV0"/>
+                            <constraint firstItem="vjq-CI-R6x" firstAttribute="leading" secondItem="yB6-bE-1hu" secondAttribute="leading" id="DGh-eJ-BxN"/>
+                            <constraint firstItem="yB6-bE-1hu" firstAttribute="centerY" secondItem="9rk-Cr-A3u" secondAttribute="centerY" multiplier="3:4" id="HOG-mQ-nPp"/>
+                            <constraint firstItem="9rk-Cr-A3u" firstAttribute="trailing" secondItem="vjq-CI-R6x" secondAttribute="trailing" constant="16" id="Jcd-Mr-yDU"/>
+                            <constraint firstItem="1dx-uA-s71" firstAttribute="trailing" secondItem="bFv-Cn-FWD" secondAttribute="trailing" id="KyP-ZQ-6UB"/>
+                            <constraint firstItem="1dx-uA-s71" firstAttribute="top" secondItem="9rk-Cr-A3u" secondAttribute="top" id="QmQ-Kk-2Bz"/>
+                            <constraint firstItem="BYg-fW-D3a" firstAttribute="leading" secondItem="yB6-bE-1hu" secondAttribute="leading" id="Y0B-OD-YEX"/>
+                            <constraint firstItem="Cvc-bU-SQz" firstAttribute="centerY" secondItem="9rk-Cr-A3u" secondAttribute="centerY" id="asJ-sH-iSw"/>
+                            <constraint firstItem="vjq-CI-R6x" firstAttribute="top" secondItem="Wtl-bI-u58" secondAttribute="bottom" constant="32" id="erf-vD-gJx"/>
+                            <constraint firstItem="m2p-XF-8RT" firstAttribute="top" secondItem="vjq-CI-R6x" secondAttribute="bottom" constant="32" id="h5j-fm-thv"/>
+                            <constraint firstItem="9rk-Cr-A3u" firstAttribute="trailing" secondItem="BYg-fW-D3a" secondAttribute="trailing" constant="16" id="pNy-Ub-c35"/>
+                            <constraint firstItem="yB6-bE-1hu" firstAttribute="leading" secondItem="9rk-Cr-A3u" secondAttribute="leading" constant="16" id="pq0-wV-dHc"/>
+                            <constraint firstItem="1dx-uA-s71" firstAttribute="leading" secondItem="bFv-Cn-FWD" secondAttribute="leading" id="qOH-ca-nGo"/>
+                            <constraint firstItem="BYg-fW-D3a" firstAttribute="top" secondItem="yB6-bE-1hu" secondAttribute="bottom" constant="8" id="uFs-kA-ESa"/>
+                            <constraint firstItem="e4l-xl-Qg1" firstAttribute="leading" secondItem="yB6-bE-1hu" secondAttribute="leading" id="uM6-ym-3fw"/>
+                            <constraint firstItem="Wtl-bI-u58" firstAttribute="top" secondItem="e4l-xl-Qg1" secondAttribute="bottom" constant="8" id="wdn-6M-BM4"/>
+                            <constraint firstItem="Cvc-bU-SQz" firstAttribute="centerX" secondItem="9rk-Cr-A3u" secondAttribute="centerX" id="wm6-ce-qef"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="9rk-Cr-A3u"/>
+                    </view>
+                    <connections>
+                        <outlet property="loginLoadingIndicator" destination="Cvc-bU-SQz" id="Wzs-TK-Fol"/>
+                        <outlet property="loginNavigationBar" destination="1dx-uA-s71" id="P46-1e-9W7"/>
+                        <outlet property="mailAddressTextField" destination="BYg-fW-D3a" id="Jv7-jB-igw"/>
+                        <outlet property="passwordTextField" destination="Wtl-bI-u58" id="WdN-oy-Ri6"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2fL-ta-SQ8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="132.58928571428572"/>
+        </scene>
+    </scenes>
+</document>

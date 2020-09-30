@@ -1,0 +1,34 @@
+/* 
+  Localizable.strings
+  BookManager-iOS
+
+  Created by TOUYA KAWANO on 2020/06/17.
+  Copyright © 2020 Toya Kawano. All rights reserved.
+*/
+
+"bookAdd" = "書籍追加";
+"bookList" = "書籍一覧";
+"settings" = "設定";
+"bookEdit" = "書籍編集";
+
+"imageUploadButton" = "画像添付ボタン";
+"bookName" = "書籍名";
+"price" = "価格";
+"purchaseDate" = "購入日";
+
+"save" = "保存";
+"close" = "閉じる";
+
+"OK" = "OK";
+"Cancel" = "Cancel";
+
+"done" = "done";
+"warning" = "警告";
+"success" = "成功";
+"login_success_message" = "ログインに成功しました。";
+"logout_confirm_message" = "ログアウトします。";
+"logout_success_message" = "ログアウトに成功しました。";
+"book_add_success_message" = "書籍の登録に成功しました。";
+"book_edit_success_message" = "書籍の編集に成功しました。";
+"network_failure_message" = "通信に失敗しました。入力内容をご確認の上再度お試しください。";
+
